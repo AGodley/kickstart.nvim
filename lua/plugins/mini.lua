@@ -17,15 +17,15 @@ return {
       -- - sr)'  - [S]urround [R]eplace [)] [']
       require('mini.surround').setup()
 
-      -- File navigation
-      -- <leader>tf - [T]oggle [F]ile navigator
-      require('mini.files').setup()
-      local minifiles_toggle = function(...)
-        if not MiniFiles.close() then
-          MiniFiles.open(...)
-        end
-      end
-      vim.keymap.set('n', '<leader>tf', minifiles_toggle, { desc = 'Toggle file navigator menu' })
+      -- -- File navigation
+      -- -- <leader>tf - [T]oggle [F]ile navigator
+      -- require('mini.files').setup()
+      -- local minifiles_toggle = function(...)
+      --   if not MiniFiles.close() then
+      --     MiniFiles.open(...)
+      --   end
+      -- end
+      -- vim.keymap.set('n', '<leader>tf', minifiles_toggle, { desc = 'Toggle file navigator menu' })
 
       -- Simple and easy statusline.
       --  You could remove this setup call if you don't like it,

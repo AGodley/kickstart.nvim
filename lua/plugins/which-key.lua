@@ -3,7 +3,7 @@ return {
     'folke/which-key.nvim',
     event = 'VimEnter', -- Sets the loading event to 'VimEnter'
     opts = {
-      -- delay between pressing a key and opening which-key (milliseconds)
+     -- delay between pressing a key and opening which-key (milliseconds)
       -- this setting is independent of vim.o.timeoutlen
       delay = 0,
       icons = {
@@ -50,5 +50,15 @@ return {
         { '<leader>h', group = 'Git [H]unk', mode = { 'n', 'v' } },
       },
     },
+    keys = {
+	{ '<leader>?',
+	function ()
+		local wk = require('which-key');
+		local mode = vim.api.nvim_get_mode().mode;
+		wk.show({ mode = mode });
+	end,
+	desc = 'Show keymaps',
+	}
+    }
   },
 }
